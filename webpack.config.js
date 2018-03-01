@@ -7,7 +7,7 @@ module.exports = {
     // context: __dirname + '/src',
     devtool: debug ? "inline-sourcemap" : null,
     entry: {
-        app: './src/index.js'
+        app: './src/js/index.js'
     },
     devServer: {
         contentBase: './'
@@ -22,6 +22,10 @@ module.exports = {
                 query: {
                     presets: ['react', 'es2015']
                 }
+            },
+            {
+                test: /\.css$/,
+                loader:'style-loader!css-loader'
             }
         ]
     },
