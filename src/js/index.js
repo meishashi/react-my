@@ -6,6 +6,7 @@ import PCIndex from './components/pc_index';
 import MobileIndex from './components/mobile_index';
 import MediaQuery from 'react-responsive';
 import 'antd/dist/antd.css';
+
 export default class Root extends React.Component{
     render(){
         return (
