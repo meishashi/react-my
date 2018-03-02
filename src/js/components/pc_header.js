@@ -3,6 +3,12 @@ import { Row, Col } from 'antd';
 import { Menu, Icon } from 'antd';
 
 export default class PCHeader extends React.Component {
+    constructor(){
+        super();
+        this.state ={
+            current: 'toutiao'
+        }
+    }
     render() {
         return (
             <header>
@@ -15,17 +21,24 @@ export default class PCHeader extends React.Component {
                         </a>
                     </Col>
                     <Col span={16}>
-                        <Menu mode="horizontal">
-                            <Menu.Item key="mail">
-                                <Icon type="mail" />Navigation One
+                        <Menu 
+                            mode="horizontal"
+                            selectedKeys={[this.state.current]}>
+                            <Menu.Item key="toutiao">
+                                <Icon type="appstore" />头条
                             </Menu.Item>
-                            <Menu.Item>
-                                <Icon type="appstore" />Navigation Two
+                            <Menu.Item key="shehui">
+                                <Icon type="mail" />社会
                             </Menu.Item>
-                            <Menu.Item>
-                                <a href="https://ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
+                            <Menu.Item key="guonei">
+                                <Icon type="mail" />国内
                             </Menu.Item>
-                            
+                            <Menu.Item key="guoji">
+                                <Icon type="mail" />国际
+                            </Menu.Item>
+                            <Menu.Item key="yule">
+                                <Icon type="mail" />娱乐
+                            </Menu.Item>
                         </Menu>
                     </Col>
                     <Col span={2}></Col>
